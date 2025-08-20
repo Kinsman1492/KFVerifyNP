@@ -13,7 +13,7 @@
         <div id="message">@ViewData["message"]</div>
     </div>
 
-        <div id="card-1" class="verification-card">
+    <div id="card-1" class="verification-card">
         <button type="button" id="get-vc" class="button">Step 1: Get your card at MyAccount to prove your employment</button>
         <p>To get support, you need to have your <a href="https://learn.microsoft.com/en-us/entra/verified-id/verifiable-credentials-configure-tenant-quick#myaccount-available-now-to-simplify-issuance-of-workplace-credentials" target="_blank">
             VerifiedEmployee card</a> with a photo.</p>
@@ -23,7 +23,7 @@
             <a id="have-verifiedemployee" class="skipButton">I already have my card</a>
         </div>
     </div>
-    
+
     <div id="card-2" class="verification-card">
         <button type="button" id="verify-credential" class="button">Step 2: Present your VerifiedEmployee card</button>
         <p>Use the Authenticator to present your VerifiedEmployee card</p>
@@ -41,11 +41,13 @@
                 <li>Face check score:<div id="faceScore" class="monospacedText"></div></li>
             </ul>
             <br>
+            <!-- to make it obvious that this is a demo site -->
             <p class="marquee">
                 This is a demo site. You will not be contacted by a support personnel.
             </p>
         </div>
     </div>
+
 
     <script src="~/js/qrcode.min.js"></script>
     <script src="~/js/verifiedid.requestservice.client.js"></script>
