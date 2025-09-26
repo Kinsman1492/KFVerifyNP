@@ -49,10 +49,12 @@ namespace WoodgroveHelpdesk.Controllers {
         }
 
         private async Task<ActionResult> HandleRequestCallback( RequestType requestType, string body ) {
+            _log.LogInformation("hello");
             try {
                 this.Request.Headers.TryGetValue( "api-key", out var apiKey );
                 if (requestType != RequestType.Selfie && this._apiKey != apiKey) {
                     _log.LogTrace( "api-key wrong or missing" );
+                    
                     return new ContentResult() { StatusCode = (int)HttpStatusCode.Unauthorized, Content = "api-key wrong or missing" };
                 }
                 if ( body == null) {
